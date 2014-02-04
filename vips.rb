@@ -17,6 +17,7 @@ class Vips < Formula
   depends_on 'openslide' => :optional
   depends_on 'libtiff' => :optional
   depends_on 'imagemagick' => :optional
+  depends_on 'graphicsmagick' => :optional
   depends_on 'fftw' => :optional
   depends_on 'little-cms' => :optional
   depends_on 'pango' => :optional
@@ -26,8 +27,11 @@ class Vips < Formula
   depends_on 'webp' => :optional
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    args = [ "--disable-dependency-tracking",
+             "--prefix=#{prefix}"]
+
+    args.concat ['--with-magick', '--with-magickpackage=GraphicsMagick'] if build.with? 'graphicsmagick'
+    system "./configure", *args
     system 'make', 'check' if build.with? 'check'
     system 'make', 'install'
   end
