@@ -6,6 +6,8 @@ class Nip2 < Formula
   option "with-check", "Enable build-time checking"
 
   depends_on "pkg-config" => :build
+  depends_on "gettext"
+  depends_on "glib"
   depends_on "gtk+"
   depends_on "libxml2"
   depends_on "vips"
@@ -24,5 +26,9 @@ class Nip2 < Formula
     system "./configure", *args
     system "make", "check" if build.with? "check"
     system "make", "install"
+  end
+
+  test do
+    system "#{bin}/nip2 --benchmark" 
   end
 end
