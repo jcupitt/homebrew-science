@@ -29,6 +29,6 @@ class Nip2 < Formula
   end
 
   test do
-    system "#{bin}/nip2 --benchmark" 
+    system "#{bin}/nip2", "--benchmark" 
   end
 end
