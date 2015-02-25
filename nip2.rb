@@ -6,6 +6,7 @@ class Nip2 < Formula
   option "with-check", "Enable build-time checking"
 
   depends_on "pkg-config" => :build
+  depends_on "XML::Parser" => :perl
   depends_on "gettext"
   depends_on "glib"
   depends_on "gtk+"
