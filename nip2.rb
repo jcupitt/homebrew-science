@@ -29,6 +29,12 @@ class Nip2 < Formula
   end
 
   test do
+    # when first run, nip2 tries to create ~/Library/nip2-x.y.z
+    # to hold temp files ... ~/Library is not present in homebrew's
+    # private test home directory
+    require 'fileutils'
+    FileUtils.mkdir_p ENV['HOME'] + '/Library'
+
     system "#{bin}/nip2", "--benchmark" 
   end
 end
