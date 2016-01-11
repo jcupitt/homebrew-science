@@ -1,7 +1,7 @@
 class Vips < Formula
   homepage "http://www.vips.ecs.soton.ac.uk/"
-  url "http://www.vips.ecs.soton.ac.uk/supported/8.1/vips-8.1.1.tar.gz"
-  sha256 "7d53c9b1e2ecd87ab9a7ccc9abad8b3a4f2575115b8a2066a15b0c24f17d9a04"
+  url "http://www.vips.ecs.soton.ac.uk/supported/8.2/vips-8.2.1.tar.gz"
+  sha256 "bcedee8cd654b26591e08c7085758764358c12fdf1a2141cd5e539a046365928"
   revision 1
 
   bottle do
