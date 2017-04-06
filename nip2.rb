@@ -1,8 +1,8 @@
 class Nip2 < Formula
   desc "GUI for the VIPS image processing system"
-  homepage "http://www.vips.ecs.soton.ac.uk/"
-  url "http://www.vips.ecs.soton.ac.uk/supported/8.4/nip2-8.4.0.tar.gz"
-  sha256 "7a8c8b145216fbf2212de6eda4fbaff1884e3e1f8970f5e14e12a5df164e2c8a"
+  homepage "https://github.com/jcupitt/nip2"
+  url "https://github.com/jcupitt/nip2/releases/download/v8.5.1/nip2-8.5.1.tar.gz"
+  sha256 "8a3d277ae59f880b4075d8a0d4fe081e99605cbfb22f3647dafce9e24dbeb9f3"
 
   bottle do
     cellar :any
@@ -19,7 +19,6 @@ class Nip2 < Formula
   depends_on "gettext"
   depends_on "glib"
   depends_on "gtk+"
-  depends_on "libxml2"
   depends_on "vips"
 
   depends_on "fftw" => :recommended
